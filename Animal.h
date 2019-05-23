@@ -22,17 +22,21 @@ class Dog : public Animal
 	std::string gender;
 
 public:
-	Dog(std::string &, std::string &, std::string &, int, int);
+	Dog(const std::string &, const std::string &, const std::string &, int, int);
 	void make_sound();
-	void wag();
+	void age(int h, int w);
 
 };
-/*
+
 class Cat : public Animal
 {
+	int height;
+	int weight;
+	std::string collor;
+	std::string gender;
 public:
-	Cat(char const* name) : Animal(name) {}
+	Cat(const std::string &, const std::string &, const std::string &, int, int);
 	void make_sound();
-	void purr();
+	void age(int h, int w);
+	void purr(const std::string &a_collo);
 };
-*/

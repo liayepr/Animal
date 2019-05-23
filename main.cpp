@@ -5,9 +5,17 @@ using namespace std;
 
 int main()
 {
-	std::string &dname = "Dog";
-	Dog D(dname, "red", "femail", 4 ,5 );
-	std::cout << D.make_sound() << std::endl;
-	
+	const std::string& dname = "Dog";
+	//const std::string& dname1 = "red";
+	//const std::string& dname2 = "male";
+	Dog  Rex(dname, "red", "male", 4 ,5 );
+	Rex.make_sound();
+	Rex.age(5, 6);
+
+	const std::string& cname = "Cat";
+	Cat  Kitty(cname, "pink", "female", 2, 3);
+	Kitty.make_sound();
+	Kitty.age(3, 2);
+	Kitty.purr("pink");
 	system("pause");
 }
